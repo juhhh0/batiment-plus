@@ -19,7 +19,7 @@ export const getHomeData = async () => {
         
         const response = await fetch(url.href);
         const data = await response.json();
-        return data;
+        return data.data.attributes;
     } catch (error) {
         console.error(error);
     }

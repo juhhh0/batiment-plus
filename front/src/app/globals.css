@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+   @apply text-5xl xl:text-7xl;
+}
+
+h2 {
+   @apply text-3xl xl:text-5xl ;
+}
