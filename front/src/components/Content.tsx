@@ -7,7 +7,7 @@ export default function Content({ data }: { data: any }) {
     <section>
       {data.map((item: any, index: number) => {
         if (item.__component == "blocks.texte-and-image") return <TextAndImage data={item}/>
-        if (item.__component == "blocks.texte-and-texte") return <TextAndText/>    
+        if (item.__component == "blocks.texte-and-texte") return <TextAndText data={item}/>    
       })}
     </section>
   );

@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 .button {
-    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
 }
 
-.text-and-media {
-   h1 {
-         @apply text-3xl font-bold;
-   }
+.text-block {
+  h1 {
+    @apply text-3xl font-bold;
+  }
 
-   h2 {
-         @apply text-2xl font-bold;
-   }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
 }
 
-body:has(.menu-open){
-      overflow: hidden;
+body:has(.menu-open) {
+  overflow: hidden;
 }

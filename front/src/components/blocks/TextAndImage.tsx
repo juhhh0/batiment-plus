@@ -13,7 +13,7 @@ export default function TextAndImage({ data }: { data: TextAndImageType }) {
             alt=""
           />
         </div>
-        <div className="flex-1 flex flex-col justify-center text-and-media">
+        <div className="flex-1 flex flex-col justify-center text-block">
             <div className="max-w-sm mx-auto md:mx-0">
           <BlocksRenderer content={data.text} />
             </div>

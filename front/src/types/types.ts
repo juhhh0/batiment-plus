@@ -34,3 +34,11 @@ export type TextAndImageType = {
     text: BlocksContent;
     cta?: ButtonType;
 }
+
+export type TextAndTextType = {
+    titleBlock?: string;
+    rightText: BlocksContent;
+    leftText: BlocksContent;
+    rightCta: ButtonType;
+    leftCta: ButtonType;
+}
