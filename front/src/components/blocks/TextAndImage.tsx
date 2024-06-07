@@ -3,7 +3,6 @@ import React from "react";
 import { BlocksRenderer, BlocksContent } from "@strapi/blocks-react-renderer";
 
 export default function TextAndImage({ data }: { data: TextAndImageType }) {
-  console.log(data);
   return (
     <article className="py-10 md:py-20">
       <div className="mx-auto max-w-7xl flex flex-col gap-10 md:flex-row px-5">
