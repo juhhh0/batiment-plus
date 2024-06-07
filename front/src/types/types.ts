@@ -1,3 +1,5 @@
+import { BlocksContent } from "@strapi/blocks-react-renderer";
+
 type ImageType = {
     data : {
         attributes: {
@@ -14,13 +16,21 @@ export type ButtonType = {
 
 export type HeroType = {
     title: string;
-    subtitle: string;
-    description: string;
+    subtitle?: string;
+    description?: string;
     image: ImageType
-    cta: ButtonType[]
+    cta?: ButtonType[]
 }
 
 export type NavbarType = {
     logo: ImageType;
     links: ButtonType[];
+}
+
+export type TextAndImageType = {
+    titleBlock?: string;
+    image: ImageType;
+    imagePosition: string;
+    text: BlocksContent;
+    cta?: ButtonType;
 }
