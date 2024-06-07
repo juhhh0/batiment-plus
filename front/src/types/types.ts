@@ -6,7 +6,8 @@ type ImageType = {
     }
 }
 
-type CtaType = {
+export type ButtonType = {
+    id: number;
     label: string;
     link: string;
 }
@@ -16,5 +17,10 @@ export type HeroType = {
     subtitle: string;
     description: string;
     image: ImageType
-    cta: CtaType[]
+    cta: ButtonType[]
+}
+
+export type NavbarType = {
+    logo: ImageType;
+    links: ButtonType[];
 }
