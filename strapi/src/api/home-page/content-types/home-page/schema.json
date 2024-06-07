@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.hero"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.texte-and-image",
+        "blocks.texte-and-texte",
+        "blocks.texte"
+      ]
+    }
+  }
+}

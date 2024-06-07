@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_icones",
+  "info": {
+    "displayName": "Icones",
+    "icon": "chartPie",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icones": {
+      "displayName": "Icone + Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.icone-text"
+    },
+    "titleBlock": {
+      "type": "string"
+    }
+  }
+}

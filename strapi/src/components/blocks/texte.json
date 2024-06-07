@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_textes",
+  "info": {
+    "displayName": "Texte",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "texte": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.boutons"
+    },
+    "titleBlock": {
+      "type": "string"
+    }
+  }
+}

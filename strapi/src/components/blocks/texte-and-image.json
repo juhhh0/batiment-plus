@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_blocks_texte_and_images",
+  "info": {
+    "displayName": "Texte & Image",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "blocks"
+    },
+    "imagePosition": {
+      "type": "enumeration",
+      "enum": [
+        "gauche",
+        "droite"
+      ],
+      "default": "gauche",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.boutons"
+    },
+    "titleBlock": {
+      "type": "string"
+    }
+  }
+}

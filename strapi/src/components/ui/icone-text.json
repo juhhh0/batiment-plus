@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_ui_icone_texts",
+  "info": {
+    "displayName": "Icone + Text",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
