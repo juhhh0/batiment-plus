@@ -24,3 +24,26 @@ export const getHomeData = async () => {
         console.error(error);
     }
 }
+
+export const getNavbarData = async () => {
+    try{
+        const url = new URL("/api/navbar", baseUrl);
+
+        url.search = qs.stringify({
+            populate: {
+              links: {
+                populate: "*",
+              },
+              logo: {
+                populate: true
+              }
+            },
+          });
+        
+        const response = await fetch(url.href);
+        const data = await response.json();
+        return data.data.attributes;
+    } catch (error) {
+        console.error(error);
+    }
+}
