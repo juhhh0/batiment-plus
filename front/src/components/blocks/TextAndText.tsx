@@ -5,14 +5,14 @@ import React from "react";
 export default function TextAndText({ data }: { data: TextAndTextType }) {
   return (
     <article className="py-10 md:py-20">
-      <div className="mx-auto max-w-7xl flex flex-col gap-10 sm:flex-row px-5 text-block">
-        <div className="flex-1">
-          <div className="max-w-sm mx-auto">
+      <div className="mx-auto max-w-5xl flex flex-col gap-10 sm:flex-row px-5 items-start text-block">
+        <div className="flex-1 flex justify-center items-center">
+          <div className="max-w-sm">
             <BlocksRenderer content={data.leftText} />
           </div>
         </div>
-        <div className="flex-1">
-          <div className="max-w-sm mx-auto md:mx-0">
+        <div className="flex-1 flex justify-center items-center">
+          <div className="max-w-sm">
             <BlocksRenderer content={data.rightText} />
           </div>
         </div>
