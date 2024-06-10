@@ -860,12 +860,22 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
+    slug: Attribute.UID;
+    seo: Attribute.Component<'shared.seo'>;
+    content: Attribute.DynamicZone<
+      [
+        'blocks.icones',
+        'blocks.texte-and-image',
+        'blocks.texte-and-texte',
+        'blocks.texte'
+      ]
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

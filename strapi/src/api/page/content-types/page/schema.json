@@ -4,15 +4,30 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page"
+    "displayName": "Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "string"
+    "slug": {
+      "type": "uid"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.icones",
+        "blocks.texte-and-image",
+        "blocks.texte-and-texte",
+        "blocks.texte"
+      ]
     }
   }
 }
