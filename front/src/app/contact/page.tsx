@@ -2,7 +2,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <main className="mx-auto max-w-5xl py-10 md:py-20">
+    <main className="mx-auto max-w-5xl py-20 px-5">
       <section className="">
         <h2 className="font-secondary font-semibold mb-5">
           Contactez Nous
