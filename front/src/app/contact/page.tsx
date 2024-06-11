@@ -4,7 +4,7 @@ export default function page() {
   return (
     <main className="mx-auto max-w-5xl py-10 md:py-20">
       <section className="">
-        <h2 className="font-secondary font-semibold text-4xl mb-5">
+        <h2 className="font-secondary font-semibold mb-5">
           Contactez Nous
         </h2>
         <p className="mb-5">
@@ -30,7 +30,7 @@ export default function page() {
             <button>Envoyer</button>
           </div>
         </form>
-        <h3 className="py-5 font-secondary font-semibold text-3xl">
+        <h3 className="py-5 font-secondary font-semibold">
           Nos Coordonnées
         </h3>
         <article className="flex items-center gap-4">
