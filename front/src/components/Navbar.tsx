@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ButtonType, NavbarType } from "@/types/types";
 import Image from "next/image";
+import Button from "./ui/Button";
 
 export default function Navbar({ data }: { data: NavbarType }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,13 +63,10 @@ export default function Navbar({ data }: { data: NavbarType }) {
 const renderLinks = ({ data }: { data: ButtonType[] }) => {
   return (
     <>
-      <li>
-        <Link href="/">Accueil</Link>
-      </li>
       {data.map((link: ButtonType, i: number) => (
-        <li key={i} className={`${i == data.length - 1 ? "button" : ""}`}>
+        <li key={i}>
           <Link href={link.link}>
-            {link.label}
+            {i != data.length - 1 ? link.label : <Button label={link.label} />}
           </Link>
         </li>
       ))}

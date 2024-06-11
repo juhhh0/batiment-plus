@@ -1,3 +1,4 @@
+import Button from "@/components/ui/Button";
 import React from "react";
 
 export default function page() {
@@ -26,9 +27,7 @@ export default function page() {
             <label htmlFor="">Message</label>
             <input type="text" />
           </div>
-          <div className="button mt-4">
-            <button>Envoyer</button>
-          </div>
+            <Button label="Envoyer"/>
         </form>
         <h3 className="py-5 font-secondary font-semibold">
           Nos Coordonnées
