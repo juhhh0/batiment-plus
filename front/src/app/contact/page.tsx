@@ -3,14 +3,17 @@ import React from "react";
 export default function page() {
   return (
     <main className="mx-auto max-w-5xl py-10 md:py-20">
-      <section className="pt-20">
-        <h2>Contactez Nous</h2>
-        <p className="text-xl">
+      <section className="">
+        <h2 className="font-secondary font-semibold text-4xl mb-5">
+          Contactez Nous
+        </h2>
+        <p className="mb-5">
           Vous souhaitez obtenir des renseignements complémentaires sur notre
           activité, des informations pour votre projet de construction ou de
-          rénovation, n’hésitez pas à nous contacter.
+          rénovation, n’hésitez pas à nous contacter via le formulaire
+          ci-dessous.
         </p>
-        <form action="">
+        <form action="" className="flex flex-col gap-4 mb-5">
           <div className="flex-col flex">
             <label htmlFor="">Prénom</label>
             <input type="text" />
@@ -23,16 +26,27 @@ export default function page() {
             <label htmlFor="">Message</label>
             <input type="text" />
           </div>
-          <button className="button mt-8"> Envoyer </button>
-        </form>
-        <h3>Nos coordonnées</h3>
-        <article className="flex">
-          <img src="https://picsum.photos/100" alt="" />
-          <div className="flex flex-col">
-            <span>Adresse : 24 rue de la Division Leclerc, Bobigny 93000</span>
-            <span>Email : contact@batiplus.fr</span>
-            <span>Téléphone : 0739274905</span>
+          <div className="button mt-4">
+            <button>Envoyer</button>
           </div>
+        </form>
+        <h3 className="py-5 font-secondary font-semibold text-3xl">
+          Nos Coordonnées
+        </h3>
+        <article className="flex items-center gap-4">
+          <img src="https://picsum.photos/100" alt="" />
+          <ul className="flex flex-col">
+            <li>
+              <span className="font-semibold">Adresse : </span>24 rue de la
+              Division Leclerc, Bobigny 93000
+            </li>
+            <li>
+              <span className="font-semibold">Email : </span>contact@batiplus.fr
+            </li>
+            <li>
+              <span className="font-semibold">Téléphone : </span>0739274905
+            </li>
+          </ul>
         </article>
       </section>
     </main>
