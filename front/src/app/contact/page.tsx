@@ -1,7 +1,9 @@
 import Button from "@/components/ui/Button";
+import { getGlobalsData } from "@/data/data";
 import React from "react";
 
-export default function page() {
+export default async function page() {
+    const globalsData = await getGlobalsData();
   return (
     <main className="mx-auto max-w-5xl py-20 px-5">
       <section className="">
@@ -33,17 +35,16 @@ export default function page() {
           Nos Coordonnées
         </h3>
         <article className="flex items-center gap-4">
-          <img src="https://picsum.photos/100" alt="" />
+          <img className="w-20" src={"http://localhost:1337" + globalsData?.globals.logo.data.attributes.url} alt="" />
           <ul className="flex flex-col">
             <li>
-              <span className="font-semibold">Adresse : </span>24 rue de la
-              Division Leclerc, Bobigny 93000
+              <span className="font-semibold">Adresse : </span>{globalsData?.globals.adress}
             </li>
             <li>
-              <span className="font-semibold">Email : </span>contact@batiplus.fr
+              <span className="font-semibold">Email : </span>{globalsData?.globals.email}
             </li>
             <li>
-              <span className="font-semibold">Téléphone : </span>0739274905
+              <span className="font-semibold">Téléphone : </span>{globalsData?.globals.phone}
             </li>
           </ul>
         </article>

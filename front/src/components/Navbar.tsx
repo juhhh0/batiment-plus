@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ButtonType, NavbarType } from "@/types/types";
+import { ButtonType, GlobalsType, NavbarType } from "@/types/types";
 import Image from "next/image";
 import Button from "./ui/Button";
 
-export default function Navbar({ data }: { data: NavbarType }) {
+export default function Navbar({ data }: { data: {navbar: NavbarType, globals: GlobalsType} }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -30,13 +30,13 @@ export default function Navbar({ data }: { data: NavbarType }) {
       <nav className="h-20 fixed z-10 w-full bg-white flex justify-between items-center px-10">
         <Link href="/">
           <img
-            src={"http://localhost:1337" + data.logo.data.attributes.url}
+            src={"http://localhost:1337" + data.globals.logo.data.attributes.url}
             alt="logo"
             className="w-14 h-14"
           />
         </Link>
         <ul className="hidden md:flex items-center gap-3 font-semibold">
-          {renderLinks({ data: data.links })}
+          {renderLinks({ data: data.navbar.links })}
         </ul>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <Image
@@ -53,7 +53,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
         }`}
       >
         <ul className="h-full flex flex-col gap-4 justify-center px-10 font-semibold text-xl">
-          {renderLinks({ data: data.links })}
+          {renderLinks({ data: data.navbar.links })}
         </ul>
       </div>
     </header>

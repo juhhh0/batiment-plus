@@ -794,6 +794,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     singularName: 'global';
     pluralName: 'globals';
     displayName: 'Global';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -802,6 +803,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     adress: Attribute.String;
     email: Attribute.String;
     phone: Attribute.String;
+    logo: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -861,12 +863,12 @@ export interface ApiNavbarNavbar extends Schema.SingleType {
     singularName: 'navbar';
     pluralName: 'navbars';
     displayName: 'Navbar';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    logo: Attribute.Media<'images'> & Attribute.Required;
     links: Attribute.Component<'ui.boutons', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
