@@ -137,7 +137,7 @@ export interface UiHero extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     subtitle: Attribute.String;
     description: Attribute.Text;
-    cta: Attribute.Component<'ui.boutons', true> &
+    cta: Attribute.Component<'ui.boutons'> &
       Attribute.SetMinMax<
         {
           max: 2;

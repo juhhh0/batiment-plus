@@ -28,7 +28,7 @@
     "cta": {
       "displayName": "Boutons",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "ui.boutons",
       "max": 2
     }

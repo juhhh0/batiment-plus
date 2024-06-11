@@ -19,7 +19,7 @@ export type HeroType = {
   subtitle?: string;
   description?: string;
   image: ImageType;
-  cta?: ButtonType[];
+  cta?: ButtonType;
 };
 
 export type NavbarType = {
