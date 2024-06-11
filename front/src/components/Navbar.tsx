@@ -66,8 +66,8 @@ const renderLinks = ({ data }: { data: ButtonType[] }) => {
         <Link href="/">Accueil</Link>
       </li>
       {data.map((link: ButtonType, i: number) => (
-        <li className={`${i == data.length - 1 ? "button" : ""}`}>
-          <Link href={link.link} key={link.id}>
+        <li key={i} className={`${i == data.length - 1 ? "button" : ""}`}>
+          <Link href={link.link}>
             {link.label}
           </Link>
         </li>
