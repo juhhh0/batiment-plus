@@ -37,11 +37,13 @@ export default function Navbar({ data }: { data: NavbarType }) {
         <ul className="hidden md:flex items-center gap-3 font-semibold">
           {renderLinks({ data: data.links })}
         </ul>
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <Image src={isOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="" width={40} height={40} />
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <Image
+            src={isOpen ? "/icons/close.svg" : "/icons/menu.svg"}
+            alt=""
+            width={40}
+            height={40}
+          />
         </button>
       </nav>
       <div
@@ -60,14 +62,12 @@ export default function Navbar({ data }: { data: NavbarType }) {
 const renderLinks = ({ data }: { data: ButtonType[] }) => {
   return (
     <>
-    <li><Link href="/">Accueil</Link></li>
+      <li>
+        <Link href="/">Accueil</Link>
+      </li>
       {data.map((link: ButtonType, i: number) => (
-        <li>
-          <Link
-            href={link.link}
-            key={link.id}
-            className={`${i == data.length - 1 ? "button" : ""}`}
-          >
+        <li className={`${i == data.length - 1 ? "button" : ""}`}>
+          <Link href={link.link} key={link.id}>
             {link.label}
           </Link>
         </li>
