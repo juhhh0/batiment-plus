@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import Navbar from "@/components/Navbar";
 import { getGlobalsData } from "@/data/data";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default async function RootLayout({
   children,
@@ -20,7 +20,7 @@ export default async function RootLayout({
 
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Navbar data={data} />
         {children}
         <Footer data={data}/>
