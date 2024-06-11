@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+main{
+  @apply py-20;
+}
+
+.h-screen-20{
+  height: calc(100vh - 80px);
+}
+
 .font-primary {
   font-family: 'Montserrat', sans-serif;
 }

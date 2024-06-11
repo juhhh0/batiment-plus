@@ -68,3 +68,31 @@ export const getGlobalsData = async () => {
     console.error(error);
   }
 };
+
+export const getPageData = async (slug: string) => {
+  try {
+    const url = new URL(`/api/pages`, baseUrl);
+
+    url.search = qs.stringify({
+      filters: {
+        $or: [
+          { slug: { $eq: slug } },
+        ],
+      },
+      populate:{
+        hero: {
+          populate: "*",
+        },
+        content: {
+          populate: "*",
+        },
+      },
+    });
+    
+    const response = await fetch(url.href);
+    const data = await response.json();
+    return data.data[0].attributes;
+  } catch (error) {
+    console.error(error);
+  }
+}

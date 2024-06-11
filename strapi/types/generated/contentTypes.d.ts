@@ -910,6 +910,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.texte'
       ]
     >;
+    title: Attribute.String;
+    hero: Attribute.Component<'ui.hero'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

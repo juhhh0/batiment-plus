@@ -65,7 +65,7 @@ const renderLinks = ({ data }: { data: ButtonType[] }) => {
     <>
       {data.map((link: ButtonType, i: number) => (
         <li key={i}>
-          <Link href={link.link}>
+          <Link href={link.link} className="text-black">
             {i != data.length - 1 ? link.label : <Button label={link.label} />}
           </Link>
         </li>

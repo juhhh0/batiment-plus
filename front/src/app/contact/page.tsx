@@ -5,7 +5,7 @@ import React from "react";
 export default async function page() {
     const globalsData = await getGlobalsData();
   return (
-    <main className="mx-auto max-w-5xl py-20 px-5">
+    <main className="mx-auto max-w-5xl px-5">
       <section className="">
         <h2 className="font-secondary font-semibold mb-5">
           Contactez Nous

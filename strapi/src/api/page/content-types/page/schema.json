@@ -28,6 +28,14 @@
         "blocks.texte-and-texte",
         "blocks.texte"
       ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.hero"
     }
   }
 }
