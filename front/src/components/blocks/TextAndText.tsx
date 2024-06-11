@@ -5,6 +5,11 @@ import React from "react";
 export default function TextAndText({ data }: { data: TextAndTextType }) {
   return (
     <article className="py-10 md:py-20">
+      {data.titleBlock && (
+        <h2 className="text-center mb-10 md:mb-16 font-secondary font-semibold">
+          {data.titleBlock}
+        </h2>
+      )}
       <div className="mx-auto max-w-5xl flex flex-col gap-10 md:gap-20 sm:flex-row px-5 items-start text-block">
         <div className="flex-1 flex items-center">
           <div className="max-w-sm">
@@ -20,4 +25,3 @@ export default function TextAndText({ data }: { data: TextAndTextType }) {
     </article>
   );
 }
-
