@@ -6,8 +6,16 @@ import { ButtonType, GlobalsType, NavbarType } from "@/types/types";
 import Image from "next/image";
 import Button from "./ui/Button";
 
-export default function Navbar({ data }: { data: {navbar: NavbarType, globals: GlobalsType} }) {
+export default function Navbar({
+  data,
+}: {
+  data: { navbar: NavbarType; globals: GlobalsType };
+}) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const resize = () => {
@@ -30,13 +38,15 @@ export default function Navbar({ data }: { data: {navbar: NavbarType, globals: G
       <nav className="h-20 fixed z-10 w-full bg-white flex justify-between items-center px-10">
         <Link href="/">
           <img
-            src={"http://localhost:1337" + data.globals.logo.data.attributes.url}
+            src={
+              "http://localhost:1337" + data.globals.logo.data.attributes.url
+            }
             alt="logo"
             className="w-14 h-14"
           />
         </Link>
         <ul className="hidden md:flex items-center gap-3 font-semibold">
-          {renderLinks({ data: data.navbar.links })}
+          {renderLinks({ data: data.navbar.links, closeMenu })}
         </ul>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <Image
@@ -53,18 +63,18 @@ export default function Navbar({ data }: { data: {navbar: NavbarType, globals: G
         }`}
       >
         <ul className="h-full flex flex-col gap-4 justify-center px-10 font-semibold text-xl">
-          {renderLinks({ data: data.navbar.links })}
+          {renderLinks({ data: data.navbar.links, closeMenu })}
         </ul>
       </div>
     </header>
   );
 }
 
-const renderLinks = ({ data }: { data: ButtonType[] }) => {
+const renderLinks = ({ data, closeMenu }: { data: ButtonType[], closeMenu: () => void }) => {
   return (
     <>
       {data.map((link: ButtonType, i: number) => (
-        <li key={i}>
+        <li key={i} onClick={closeMenu}>
           <Link href={link.link} className="text-black">
             {i != data.length - 1 ? link.label : <Button label={link.label} />}
           </Link>
