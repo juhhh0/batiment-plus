@@ -56,7 +56,7 @@ export default async function page() {
           <img
             className="w-20"
             src={
-              "http://localhost:1337" +
+              process.env.NEXT_PUBLIC_STRAPI_URL +
               globalsData?.globals.logo.data.attributes.url
             }
             alt=""

@@ -39,7 +39,7 @@ export default function Navbar({
         <Link href="/">
           <img
             src={
-              "http://localhost:1337" + data.globals.logo.data.attributes.url
+              process.env.NEXT_PUBLIC_STRAPI_URL + data.globals.logo.data.attributes.url
             }
             alt="logo"
             className="w-14 h-14"

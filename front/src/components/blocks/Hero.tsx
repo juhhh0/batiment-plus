@@ -8,7 +8,7 @@ export default function Hero({ data }: { data: HeroType }) {
     <section className="relative h-screen-20 w-full overflow-hidden flex justify-center items-center mb-10 md:mb-20">
       <img
         className="absolute brightness-50 -z-10 h-full w-full object-cover"
-        src={"http://localhost:1337" + data.image.data.attributes.url}
+        src={process.env.NEXT_PUBLIC_STRAPI_URL + data.image.data.attributes.url}
         alt=""
       />
       <div className="text-white flex flex-col gap-3 px-5">

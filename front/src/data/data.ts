@@ -1,6 +1,6 @@
 import qs from "qs";
 
-const baseUrl = "http://localhost:1337";
+const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 
 export const getHomeData = async () => {
   try {

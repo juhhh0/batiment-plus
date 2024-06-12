@@ -15,7 +15,7 @@ export default function TextAndImage({ data }: { data: TextAndImageType }) {
         <div className="flex-1 flex items-center justify-center">
           <img
             className="aspect-video md:aspect-auto object-cover w-full"
-            src={"http://localhost:1337" + data.image.data.attributes.url}
+            src={process.env.NEXT_PUBLIC_STRAPI_URL + data.image.data.attributes.url}
             alt=""
           />
         </div>

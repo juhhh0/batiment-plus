@@ -12,7 +12,7 @@ export default function Icones({ data }: { data: IconesTypes }) {
             <div className="rounded-full bg-primary w-24 md:w-32 h-24 md:h-32 p-6 md:p-10">
               <img
                 className="w-full white-img"
-                src={"http://localhost:1337" + icone.icon.data.attributes.url}
+                src={process.env.NEXT_PUBLIC_STRAPI_URL + icone.icon.data.attributes.url}
                 alt=""
               />
             </div>

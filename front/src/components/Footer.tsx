@@ -15,7 +15,7 @@ export default function Footer({
           <img
             className="w-20 white-img"
             src={
-              "http://localhost:1337" + data.globals.logo.data.attributes.url
+              process.env.NEXT_PUBLIC_STRAPI_URL + data.globals.logo.data.attributes.url
             }
             alt=""
           />
