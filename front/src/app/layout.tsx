@@ -3,8 +3,16 @@ import "./globals.scss";
 import Navbar from "@/components/Navbar";
 import { getGlobalsData } from "@/data/data";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+
+
+export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.png',
+  }
+};
 
 export default async function RootLayout({
   children,

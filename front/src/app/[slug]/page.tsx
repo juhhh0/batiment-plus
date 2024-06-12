@@ -11,7 +11,6 @@ interface PageProps {
 }
 
 export default async function page({params}: PageProps) {
-    console.log(params.slug)
     const data = await getPageData(params.slug)
 
   if(!data) notFound()
