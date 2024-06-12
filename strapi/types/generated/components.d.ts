@@ -157,7 +157,7 @@ export interface UiIconeText extends Schema.Component {
   attributes: {
     icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
-    description: Attribute.Blocks;
+    description: Attribute.Text;
   };
 }
 

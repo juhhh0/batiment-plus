@@ -1,7 +1,6 @@
 import React from "react";
 import BlockTitle from "../ui/BlockTitle";
 import { IconesTypes } from "@/types/types";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export default function Icones({ data }: { data: IconesTypes }) {
   return (
@@ -18,7 +17,7 @@ export default function Icones({ data }: { data: IconesTypes }) {
               />
             </div>
             <p className="font-semibold text-xl">{icone.title}</p>
-            <BlocksRenderer content={icone.description} />
+            <p>{icone.description}</p>
           </div>
         ))}
       </div>
