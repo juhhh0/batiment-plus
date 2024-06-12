@@ -1,16 +1,12 @@
 import { TextAndImageType } from "@/types/types";
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import BlockTitle from "../ui/BlockTitle";
 
 export default function TextAndImage({ data }: { data: TextAndImageType }) {
   return (
-    <article className="py-10 md:py-20">
-      {data.titleBlock && (
-        <h2 className="text-center mb-10 md:mb-16 font-secondary font-semibold">
-          {data.titleBlock}
-        </h2>
-      )}
-
+    <article>
+      <BlockTitle title={data.titleBlock} />
       <div
         className={`mx-auto max-w-5xl flex flex-col gap-10 md:gap-20 md:flex-row px-5 ${
           data.imagePosition == "gauche" ? "md:flex-row" : "md:flex-row-reverse"

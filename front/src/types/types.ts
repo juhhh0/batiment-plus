@@ -42,6 +42,22 @@ export type TextAndTextType = {
   leftCta: ButtonType;
 };
 
+export type TextType = {
+  titleBlock?: string;
+  texte: BlocksContent;
+};
+
+export type IconesTypes = {
+  titleBlock?: string;
+  icones: {
+    icon: ImageType;
+    title: string;
+    description: string;
+  }[];
+};
+
+
+
 export type GlobalsType = {
   logo: ImageType;
   adress: string;

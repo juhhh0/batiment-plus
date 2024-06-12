@@ -75,24 +75,40 @@ export const getPageData = async (slug: string) => {
 
     url.search = qs.stringify({
       filters: {
-        $or: [
-          { slug: { $eq: slug } },
-        ],
+        $or: [{ slug: { $eq: slug } }],
       },
-      populate:{
+      populate: {
         hero: {
           populate: "*",
         },
         content: {
           populate: "*",
+          on: {
+            "blocks.icones": {
+              populate: {
+                icones: {
+                  populate: "*",
+                },
+              },
+            },
+            "blocks.texte-and-image": {
+              populate: "*"
+            },
+            "blocks.texte-and-texte": {
+              populate: "*"
+            },
+            "blocks.texte": {
+              populate: "*"
+            },
+          },
         },
       },
     });
-    
+
     const response = await fetch(url.href);
     const data = await response.json();
     return data.data[0].attributes;
   } catch (error) {
     console.error(error);
   }
-}
+};
