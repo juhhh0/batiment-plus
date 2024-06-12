@@ -12,7 +12,7 @@ export default function Footer({
       <div className="flex flex-col-reverse md:flex-row gap-6">
         <div className="justify-center items-center flex-1 flex">
           <img
-            className="w-20"
+            className="w-20 white-logo"
             src={
               "http://localhost:1337" + data.globals.logo.data.attributes.url
             }
