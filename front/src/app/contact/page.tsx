@@ -17,21 +17,35 @@ export default async function page() {
           ci-dessous.
         </p>
         <form action="" className="flex flex-col gap-4 mb-5">
-          <div className="flex-col flex">
-            <label htmlFor="">Prénom</label>
+          <div className="flex-col flex gap-1">
+            <label htmlFor="">Nom<span className="text-red-500 mx-1">*</span></label>
             <input type="text" />
           </div>
-          <div className="flex-col flex">
-            <label htmlFor="">Mail</label>
+          <div className="flex gap-4">
+
+          <div className="flex-col flex gap-1 flex-1">
+            <label htmlFor="">Mail<span className="text-red-500 mx-1">*</span></label>
             <input type="text" />
           </div>
-          <div className="flex-col flex">
-            <label htmlFor="">Message</label>
+          <div className="flex-col flex gap-1 flex-1">
+            <label htmlFor="">Téléphone</label>
             <input type="text" />
           </div>
+          </div>
+          <div className="flex-col flex gap-1">
+            <label htmlFor="">Sujet<span className="text-red-500 mx-1">*</span></label>
+            <input type="text" />
+          </div>
+          <div className="flex-col flex gap-1">
+            <label htmlFor="">Message<span className="text-red-500 mx-1">*</span></label>
+           <textarea name="message" id="" className="min-h-32"></textarea>
+          </div>
+          <div className="text-xs"><span className="text-red-500 mx-1 text-lg leading-3">*</span>Champs obligatoires</div>
             <Button label="Envoyer"/>
         </form>
-        <h3 className="py-5 font-secondary font-semibold">
+        <hr className="h-px my-8 border-0 bg-gray-300"></hr>
+
+        <h3 className="font-secondary font-semibold mb-5">
           Nos Coordonnées
         </h3>
         <article className="flex items-center gap-4">

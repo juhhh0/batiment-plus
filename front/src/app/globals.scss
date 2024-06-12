@@ -38,8 +38,12 @@ h5, h6 {
 }
 
 
-input{
-  border: 1px solid #e2e8f0;
+input, textarea{
+  @apply border border-gray-200;
+}
+
+label {
+  @apply font-medium;
 }
 
 .text-block {
