@@ -838,7 +838,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     content: Attribute.DynamicZone<
       ['blocks.texte-and-image', 'blocks.texte-and-texte', 'blocks.texte']
     >;
-    seo: Attribute.Component<'shared.seo'>;
+    seo: Attribute.Component<'shared.seo'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -900,8 +900,8 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    slug: Attribute.UID;
-    seo: Attribute.Component<'shared.seo'>;
+    slug: Attribute.UID<'api::page.page', 'title'>;
+    seo: Attribute.Component<'shared.seo'> & Attribute.Required;
     content: Attribute.DynamicZone<
       [
         'blocks.icones',

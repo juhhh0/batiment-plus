@@ -21,6 +21,10 @@ main{
   font-family: 'Playfair Display', serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply mb-4;
+}
+
 h2 {
   @apply text-3xl md:text-4xl;
 }
@@ -49,7 +53,7 @@ label {
 .text-block {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-    @apply font-semibold pb-4;
+    @apply font-semibold;
   }
 }
 

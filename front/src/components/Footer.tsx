@@ -38,9 +38,9 @@ export default function Footer({
       </div>
       <ul className="flex gap-4 justify-center mt-6">
         <li>
-          <Link href="/cgu">Mentions Légales</Link>
+          <Link href="/mentions-legales">Mentions Légales</Link>
         </li>
-        <li>©2024 - Agency</li>
+        <li>© 2024 - Bâtiment Plus</li>
       </ul>
     </footer>
   );
