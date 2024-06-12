@@ -1,6 +1,6 @@
 import { ButtonType, HeroType } from "@/types/types";
 import React from "react";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 import Link from "next/link";
 
 export default function Hero({ data }: { data: HeroType }) {

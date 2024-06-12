@@ -1,6 +1,7 @@
 import { GlobalsType, NavbarType } from "@/types/types";
 import Link from "next/link";
 import React from "react";
+import Informations from "./ui/Informations";
 
 export default function Footer({
   data,
@@ -19,21 +20,8 @@ export default function Footer({
             alt=""
           />
         </div>
-        <div className="flex-1 flex md:justify-center">
-          <ul>
-            <li>
-              <span className="font-semibold">Adresse : </span>
-              {data.globals.adress}
-            </li>
-            <li>
-              <span className="font-semibold">Email : </span>
-              {data.globals.email}
-            </li>
-            <li>
-              <span className="font-semibold">Téléphone : </span>
-              {data.globals.phone}
-            </li>
-          </ul>
+        <div className="flex-1 flex items-center md:justify-center">
+          <Informations data={data.globals} />
         </div>
         <div className="flex flex-1 md:justify-center">
           <ul>

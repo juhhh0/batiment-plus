@@ -1,5 +1,5 @@
 import Content from "@/components/Content";
-import Hero from "@/components/Hero";
+import Hero from "@/components/blocks/Hero";
 import { getHomeData } from "@/data/data";
 import { Metadata } from "next";
 

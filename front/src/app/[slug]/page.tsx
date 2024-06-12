@@ -1,5 +1,5 @@
 import Content from '@/components/Content';
-import Hero from '@/components/Hero';
+import Hero from '@/components/blocks/Hero';
 import { getPageData } from '@/data/data'
 import { notFound } from 'next/navigation';
 import React from 'react'
