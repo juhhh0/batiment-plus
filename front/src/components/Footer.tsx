@@ -8,39 +8,52 @@ export default function Footer({
   data: { navbar: NavbarType; globals: GlobalsType };
 }) {
   return (
-    <footer className="bg-black text-white flex items-center py-10">
-      <div className="flex-1 flex justify-center">
-        <img
-          className="w-20"
-          src={"http://localhost:1337" + data.globals.logo.data.attributes.url}
-          alt=""
-        />
-      </div>
-      <div className="flex-1">
-        <ul>
-          <li>
-            <span className="font-semibold">Adresse : </span>{data.globals.adress}
-          </li>
-          <li>
-            <span className="font-semibold">Email : </span>{data.globals.email}
-          </li>
-          <li>
-            <span className="font-semibold">Téléphone : </span>{data.globals.phone}
-          </li>
-        </ul>
-      </div>
-      <div className="flex-1 flex justify-center">
-        <ul>
-          <li>
-            <Link href={"/"}>Accueil</Link>
-          </li>
-          {data.navbar.links.map((link, index) => (
-            <li key={index}>
-              <Link href={link.link}>{link.label}</Link>
+    <footer className="bg-black text-white  py-10 px-5">
+      <div className="flex flex-col-reverse md:flex-row gap-6">
+        <div className="justify-center items-center flex-1 flex">
+          <img
+            className="w-20"
+            src={
+              "http://localhost:1337" + data.globals.logo.data.attributes.url
+            }
+            alt=""
+          />
+        </div>
+        <div className="flex-1 flex md:justify-center">
+          <ul>
+            <li>
+              <span className="font-semibold">Adresse : </span>
+              {data.globals.adress}
             </li>
-          ))}
-        </ul>
+            <li>
+              <span className="font-semibold">Email : </span>
+              {data.globals.email}
+            </li>
+            <li>
+              <span className="font-semibold">Téléphone : </span>
+              {data.globals.phone}
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-1 md:justify-center">
+          <ul>
+            <li>
+              <Link href={"/"}>Accueil</Link>
+            </li>
+            {data.navbar.links.map((link, index) => (
+              <li key={index}>
+                <Link href={link.link}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+      <ul className="flex gap-4 justify-center mt-6">
+        <li>
+          <Link href="/cgu">Mentions Légales</Link>
+        </li>
+        <li>©2024 - Agency</li>
+      </ul>
     </footer>
   );
 }
