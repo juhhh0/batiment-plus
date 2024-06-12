@@ -8,6 +8,9 @@ export const getHomeData = async () => {
 
     url.search = qs.stringify({
       populate: {
+        seo: {
+          populate: true,
+        },
         hero: {
           populate: "*",
         },
@@ -78,6 +81,9 @@ export const getPageData = async (slug: string) => {
         $or: [{ slug: { $eq: slug } }],
       },
       populate: {
+        seo: {
+          populate: true,
+        },
         hero: {
           populate: "*",
         },

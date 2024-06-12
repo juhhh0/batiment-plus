@@ -5,9 +5,8 @@ import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const data = await fetch(`http://localhost:1337/api/home-page?populate=*`);
-  const res = await data.json();
-  const metaData = res.data.attributes.seo
+  const data = await getHomeData();
+  const metaData = data.seo
 
   return {
     title: metaData.metaTitle,
