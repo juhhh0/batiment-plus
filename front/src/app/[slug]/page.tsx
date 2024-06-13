@@ -14,11 +14,11 @@ interface PageProps {
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
 
   const data = await getPageData(params.slug)
-  const metaData = data.seo
+  const metaData = data?.seo
 
   return {
-    title: metaData.metaTitle,
-    description: metaData.metaDescription,
+    title: metaData?.metaTitle,
+    description: metaData?.metaDescription,
   };
 }
 

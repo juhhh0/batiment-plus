@@ -12,16 +12,21 @@ export default function TextAndImage({ data }: { data: TextAndImageType }) {
           data.imagePosition == "gauche" ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 max-w-xl flex items-center justify-center">
           <img
             className="aspect-video md:aspect-auto object-cover w-full"
-            src={process.env.NEXT_PUBLIC_STRAPI_URL + data.image.data.attributes.url}
+            src={
+              process.env.NEXT_PUBLIC_STRAPI_URL +
+              data.image.data.attributes.url
+            }
             alt=""
           />
         </div>
-        <div className="flex-1 flex flex-col justify-center text-block">
-          <BlocksRenderer content={data.text} />
-        </div>
+        {data.text && (
+          <div className="flex-1 flex flex-col justify-center text-block">
+            <BlocksRenderer content={data.text} />
+          </div>
+        )}
       </div>
     </article>
   );
