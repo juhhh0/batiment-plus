@@ -10,21 +10,10 @@ export default function Footer({
 }) {
   return (
     <footer className="bg-black text-white  py-10 px-5">
-      <div className="flex flex-col-reverse md:flex-row gap-6 text-center">
-        <div className="flex justify-center items-center flex-1">
-          <img
-            className="w-20 white-img"
-            src={
-              process.env.NEXT_PUBLIC_STRAPI_URL +
-              data.globals.logo.data.attributes.url
-            }
-            alt=""
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <Informations data={data.globals} />
-        </div>
-        <div className="flex flex-1 justify-center">
+      <div className="flex flex-row-reverse flex-wrap gap-6">
+
+     
+        <div className="flex flex-1  md:text-right min-w-40">
           <ul>
             <li>
               <Link href={"/"}>Accueil</Link>
@@ -38,6 +27,19 @@ export default function Footer({
               <Link href="/mentions-legales">Mentions Légales</Link>
             </li>
           </ul>
+        </div>
+        <div className="flex-1 flex items-center justify-center min-w-80">
+          <Informations data={data.globals} />
+        </div>
+        <div className="flex justify-center items-center flex-1 min-w-40">
+          <img
+            className="w-20 white-img"
+            src={
+              process.env.NEXT_PUBLIC_STRAPI_URL +
+              data.globals.logo.data.attributes.url
+            }
+            alt=""
+          />
         </div>
       </div>
       <ul className="flex gap-4 justify-center mt-6">
