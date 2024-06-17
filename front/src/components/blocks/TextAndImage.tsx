@@ -5,10 +5,10 @@ import BlockTitle from "../ui/BlockTitle";
 
 export default function TextAndImage({ data }: { data: TextAndImageType }) {
   return (
-    <article>
+    <article className="mx-auto max-w-5xl">
       <BlockTitle title={data.titleBlock} />
       <div
-        className={`mx-auto max-w-5xl flex flex-col gap-10 md:gap-20 md:flex-row px-5 ${
+        className={`flex flex-col gap-10 md:gap-20 md:flex-row px-5 ${
           data.imagePosition == "gauche" ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
