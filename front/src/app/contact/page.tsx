@@ -18,7 +18,7 @@ export default async function page() {
         </p>
         <form action="" className="flex flex-col gap-4 mb-5">
           <Input label="Nom" required={true} name="name" type="text" />
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <Input
               label="Mail"
               required={true}
