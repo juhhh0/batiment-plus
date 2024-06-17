@@ -12,7 +12,7 @@ export default function TextAndImage({ data }: { data: TextAndImageType }) {
           data.imagePosition == "gauche" ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
-        <div className="flex-1 max-w-xl flex items-center justify-center">
+        <div className="flex-1 max-w-xl mx-auto flex items-center justify-center">
           <img
             className="aspect-video md:aspect-auto object-cover w-full"
             src={
