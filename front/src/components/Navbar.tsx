@@ -73,7 +73,7 @@ export default function Navbar({
 const renderLinks = ({ data, closeMenu }: { data: ButtonType[], closeMenu: () => void }) => {
   return (
     <>
-      {data.map((link: ButtonType, i: number) => (
+      {data?.map((link: ButtonType, i: number) => (
         <li key={i} onClick={closeMenu}>
           <Link href={link.link} className="text-black">
             {i != data.length - 1 ? link.label : <Button label={link.label} />}

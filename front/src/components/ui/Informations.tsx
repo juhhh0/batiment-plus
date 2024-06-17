@@ -3,12 +3,12 @@ import React from "react";
 export default function Informations({ data }: { data: any }) {
   return (
     <ul className="informations flex flex-col gap-1">
-      <Item icon="location.svg">{data.adress}</Item>
+      <Item icon="location.svg">{data?.adress}</Item>
       <Item icon="mail.svg">
-        <a href={"mailto:" + data.email}>{data.email}</a>
+        <a href={"mailto:" + data?.email}>{data?.email}</a>
       </Item>
       <Item icon="phone.svg">
-        <a href={"tel:" + data.phone}>{data.phone}</a>
+        <a href={"tel:" + data?.phone}>{data?.phone}</a>
       </Item>
     </ul>
   );

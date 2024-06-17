@@ -8,7 +8,7 @@ import Accordeon from "./blocks/Accordeon";
 export default function Content({ data }: { data: any }) {
   return (
     <section className="content-section">
-      {data.map((item: any, index: number) => {
+      {data?.map((item: any, index: number) => {
         if (item.__component == "blocks.texte-and-image") return <TextAndImage key={index} data={item}/>
         if (item.__component == "blocks.texte-and-texte") return <TextAndText key={index} data={item}/>    
         if (item.__component == "blocks.texte") return <Text key={index} data={item}/>    

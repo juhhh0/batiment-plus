@@ -6,11 +6,11 @@ import { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
 
   const data = await getHomeData();
-  const metaData = data.seo
+  const metaData = data?.seo
 
   return {
-    title: metaData.metaTitle,
-    description: metaData.metaDescription,
+    title: metaData?.metaTitle,
+    description: metaData?.metaDescription,
   };
 }
 
@@ -20,8 +20,8 @@ export default async function Home() {
   
   return (
     <main>
-      <Hero data={data.hero} />
-      <Content data={data.content} />
+      <Hero data={data?.hero} />
+      <Content data={data?.content} />
     </main>
   );
 }

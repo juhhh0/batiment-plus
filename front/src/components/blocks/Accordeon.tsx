@@ -8,7 +8,7 @@ export default function Accordeon({data} : {data: any}) {
   return (
     <article className="mx-auto max-w-5xl px-5">
       <BlockTitle title={data.titleBlock} />
-      {data.items.map((item: any) => (
+      {data?.items.map((item: any) => (
         <Item key={item.id} data={item} />
       ))}
     </article>

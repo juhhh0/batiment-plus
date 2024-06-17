@@ -18,7 +18,7 @@ export default function Footer({
             <li>
               <Link href={"/"}>Accueil</Link>
             </li>
-            {data.navbar.links.map((link, index) => (
+            {data?.navbar.links.map((link, index) => (
               <li key={index}>
                 <Link href={link.link}>{link.label}</Link>
               </li>

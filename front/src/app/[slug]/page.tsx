@@ -30,7 +30,7 @@ export default async function page({params}: PageProps) {
   return (
     <main> 
         {data.hero && <Hero data={data.hero} />}
-        <Content data={data.content} />
+        <Content data={data?.content} />
     </main>
   )
 }
