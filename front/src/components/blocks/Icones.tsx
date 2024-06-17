@@ -17,7 +17,7 @@ export default function Icones({ data }: { data: IconesTypes }) {
               />
             </div>
             <p className="font-semibold text-xl">{icone.title}</p>
-            <p className="min-w-52">{icone.description}</p>
+            {icone.description && <p className="min-w-52">{icone.description}</p>}
           </div>
         ))}
       </div>
