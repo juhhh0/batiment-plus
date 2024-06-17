@@ -28,7 +28,8 @@
         "blocks.icones",
         "blocks.texte-and-image",
         "blocks.texte-and-texte",
-        "blocks.texte"
+        "blocks.texte",
+        "blocks.accordeon"
       ]
     },
     "title": {

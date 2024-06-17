@@ -1,25 +1,21 @@
 "use client";
 
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import React, { useState } from "react";
+import BlockTitle from "../ui/BlockTitle";
 
 export default function Accordeon({data} : {data: any}) {
   return (
     <article className="mx-auto max-w-5xl px-5">
-      <div>
-        <div className="flex justify-between border-bottom border-b px-2 py-4">
-          <p>Question</p>
-          <span>+</span>
-        </div>
-        <div className="px-2 py-4">
-          <p>Réponse</p>
-        </div>
-      </div>
-      <Item />
+      <BlockTitle title={data.titleBlock} />
+      {data.items.map((item: any) => (
+        <Item key={item.id} data={item} />
+      ))}
     </article>
   );
 }
 
-const Item = () => {
+const Item = ({data} : {data: any}) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -30,11 +26,11 @@ const Item = () => {
           setActive(!active);
         }}
       >
-        <p>Question</p>
-        <span>{active ? "-" : "+"}</span>
+        <p>{data.title}</p>
+        <span className="text-primary">{active ? "-" : "+"}</span>
       </div>
       <div className={`px-2 py-4 ${active ? "block" : "hidden"}`}>
-        <p>Réponse</p>
+        <BlocksRenderer content={data.content}/>
       </div>
     </div>
   );

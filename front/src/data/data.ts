@@ -106,6 +106,9 @@ export const getPageData = async (slug: string) => {
             "blocks.texte": {
               populate: "*"
             },
+            "blocks.accordeon": {
+              populate: "*"
+            }
           },
         },
       },

@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BlocksAccordeon extends Schema.Component {
+  collectionName: 'components_blocks_accordeons';
+  info: {
+    displayName: 'Accordeon';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    titleBlock: Attribute.String;
+    items: Attribute.Component<'ui.accordeon-item', true>;
+  };
+}
+
 export interface BlocksIcones extends Schema.Component {
   collectionName: 'components_blocks_icones';
   info: {
@@ -112,6 +125,19 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
+export interface UiAccordeonItem extends Schema.Component {
+  collectionName: 'components_ui_accordeon_items';
+  info: {
+    displayName: 'Accordeon Item';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    content: Attribute.Blocks & Attribute.Required;
+  };
+}
+
 export interface UiBoutons extends Schema.Component {
   collectionName: 'components_ui_boutons';
   info: {
@@ -164,12 +190,14 @@ export interface UiIconeText extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'blocks.accordeon': BlocksAccordeon;
       'blocks.icones': BlocksIcones;
       'blocks.texte-and-image': BlocksTexteAndImage;
       'blocks.texte-and-texte': BlocksTexteAndTexte;
       'blocks.texte': BlocksTexte;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
+      'ui.accordeon-item': UiAccordeonItem;
       'ui.boutons': UiBoutons;
       'ui.hero': UiHero;
       'ui.icone-text': UiIconeText;

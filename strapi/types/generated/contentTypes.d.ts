@@ -836,7 +836,13 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   attributes: {
     hero: Attribute.Component<'ui.hero'>;
     content: Attribute.DynamicZone<
-      ['blocks.texte-and-image', 'blocks.texte-and-texte', 'blocks.texte']
+      [
+        'blocks.texte-and-image',
+        'blocks.texte-and-texte',
+        'blocks.texte',
+        'blocks.accordeon',
+        'blocks.icones'
+      ]
     >;
     seo: Attribute.Component<'shared.seo'> & Attribute.Required;
     createdAt: Attribute.DateTime;
@@ -907,7 +913,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.icones',
         'blocks.texte-and-image',
         'blocks.texte-and-texte',
-        'blocks.texte'
+        'blocks.texte',
+        'blocks.accordeon'
       ]
     >;
     title: Attribute.String;

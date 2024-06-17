@@ -23,7 +23,9 @@
       "components": [
         "blocks.texte-and-image",
         "blocks.texte-and-texte",
-        "blocks.texte"
+        "blocks.texte",
+        "blocks.accordeon",
+        "blocks.icones"
       ]
     },
     "seo": {

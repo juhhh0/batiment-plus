@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_accordeons",
+  "info": {
+    "displayName": "Accordeon",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleBlock": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "Accordeon Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.accordeon-item"
+    }
+  }
+}

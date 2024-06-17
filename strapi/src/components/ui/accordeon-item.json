@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_ui_accordeon_items",
+  "info": {
+    "displayName": "Accordeon Item",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
