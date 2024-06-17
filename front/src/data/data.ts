@@ -20,7 +20,7 @@ export const getHomeData = async () => {
       },
     });
 
-    const response = await fetch(url.href);
+    const response = await fetch(url.href, { cache: "no-store" });
     const data = await response.json();
     return data.data.attributes;
   } catch (error) {
@@ -39,7 +39,7 @@ const getNavbar = async () => {
     },
   });
 
-  const response = await fetch(url.href);
+  const response = await fetch(url.href, { cache: "no-store" });
   return response.json();
 };
 
@@ -54,7 +54,7 @@ const getGlobal = async () => {
     },
   });
 
-  const response = await fetch(url.href);
+  const response = await fetch(url.href, { cache: "no-store" });
   return response.json();
 };
 
@@ -114,7 +114,7 @@ export const getPageData = async (slug: string) => {
       },
     });
 
-    const response = await fetch(url.href);
+    const response = await fetch(url.href, { cache: "no-store" });
     const data = await response.json();
     return data.data[0].attributes;
   } catch (error) {
